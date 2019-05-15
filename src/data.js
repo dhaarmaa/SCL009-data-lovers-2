@@ -15,9 +15,10 @@ window.example = example;*/
 /*data: array
 sortBy: lo que quero ordenar
 sortorder: como lo quiero ordenar */
-const orderlol= (datalol, sortBy, sortOrder)=>{
-    let  ascLol= datalol;
-    if(sortOrder===a-z){
+/*const orderlol= (datalol, sortBy, sortOrder)=>{
+   // let  ascLol= datalol;
+    let resultLol = []
+    if(sortOrder === "a-z"){
       ascLol.sort((a, b)=>{
         if(a[sortBy]< b[sortBy]){
           return -1;}
@@ -28,13 +29,13 @@ const orderlol= (datalol, sortBy, sortOrder)=>{
     } 
   
   }
-  window.orderlol= orderlol;
+  window.orderlol= orderlol;*/
   
   //funcion de filtrado
-  const filterlol = (data, condition) =>{
-    const lolTags = data.filter(view => {
-    return (view.tags.includes(condition));
-    }); 
+  const filterlol = (datalol, condition) =>{
+    let lolTags = datalol.filter(element=> {
+    return element.tags.includes(condition);
+    })
     
     return lolTags;
     }
