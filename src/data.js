@@ -9,102 +9,38 @@
 
 window.example = example;*/
 
-//Función de filtrado por tipo de pokémon
-const filterData = (data, condition) =>{
-const Poketype = data.filter(view => {
-return (view.type.includes(condition));
-}); 
-
-return Poketype;
-}
-window.filterData = filterData;
-
-//Función de orden por número de pókemon
-const filterOrder = (data, valueOrder, conditionOrder) =>{
-
-  let dataOrder;
-  
-    if (conditionOrder === "decreasing"){
-     dataOrder = data.sort((a,b) =>{
-        return (b[valueOrder] - a[valueOrder]);
-      });
-    }
-
-    else if(conditionOrder === "growing"){
-      dataOrder = data.sort((a,b) =>{
-        return (a[valueOrder] - b[valueOrder]);
-      });
+//const data= window.LOL.data;//llamo a mi array
+//console.log(data)
+//funcion del orden
+/*data: array
+sortBy: lo que quero ordenar
+sortorder: como lo quiero ordenar */
+const orderlol= (datalol, sortBy, sortOrder)=>{
+    let  ascLol= datalol;
+    if(sortOrder===a-z){
+      ascLol.sort((a, b)=>{
+        if(a[sortBy]< b[sortBy]){
+          return -1;}
+        if(a[sortBy]> b[sortBy]){
+          return 1;}
+        return 0;
+      })
     } 
-    
-  return dataOrder;
- 
-}  
-window.filterOrder = filterOrder;
-
-//Función de filtrar por hora de salida de los pókemones, para luego hacer el cálculo
-const filterHour = (data, valueHour, conditionHour) =>{
   
-  let dataHour;
-
-  if(conditionHour === "N/A"){
-    dataHour = data.filter(time => {
-      return (time[valueHour].includes(conditionHour));
-    });
-
   }
-
-    else if(conditionHour === "morning"){
-      dataHour = data.filter(time => {
-        
-        let valueNew = time[valueHour];
-        let valueSlice =  valueNew.slice(0, 2);
-        let valueNum = parseInt(valueSlice);
-
-        if(valueNum >= 0 && valueNum < 12){
-          return (valueNew);
-        }
-    });
+  window.orderlol= orderlol;
   
-    }
-
-    else if(conditionHour === "late"){
-      dataHour = data.filter(time => {
-        
-        let valueNew = time[valueHour];
-        let valueSlice =  valueNew.slice(0, 2);
-        let valueNum = parseInt(valueSlice);
-        
-        if(valueNum >= 12 && valueNum < 19){  
-          return (valueNew);
-        }
-    });
+  //funcion de filtrado
+  const filterlol = (data, condition) =>{
+    const lolTags = data.filter(view => {
+    return (view.tags.includes(condition));
+    }); 
     
+    return lolTags;
     }
-
-    else if (conditionHour === "night"){
-      dataHour = data.filter(time => {
-        
-        let valueNew = time[valueHour];
-        let valueSlice =  valueNew.slice(0, 2);
-        let valueNum = parseInt(valueSlice);
-        
-        if(valueNum >= 19 && valueNum <= 23){
-          return (valueNew);
-        }
-    });
-    
-    }
-    
-    return dataHour;
-    }
+    window.filterlol = filterlol;
   
-    window.filterHour = filterHour;
-
-//Función de calculo, porcentaje de pokémones según hora
-const filterCal = (data =>{
-let dataPercent = Math.round((data.length*100)/151);
-
-return dataPercent;
-});
-
-  window.filterCal = filterCal;
+  //funcion de estadistica
+  
+  
+  

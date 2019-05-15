@@ -1,118 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico" />
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="style.css" />/-->
+    <title>infolol</title>
   </head>
-  <body class="p-3 mb-2 bg-info text-white">
-    <header>
+  <body>
+    
+      <header>
+          <div class="container">
+           <div class="text-center">
+             <div class="row">
+               <div class="col-12">
+                  <img src="https://i.udemycdn.com/course/480x270/1712886_5ce0.jpg" class="img-fluid" alt="Responsive image">
+               </div>
+             </div>
+           </div>
+          </div>
+          <br>
+            <div class="container">
+            <div class="row"> 
+            <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" id="restart" href="./index.html">Menú de Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>   
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item dropdown  limargin">
+            <select class= "form-control" id="order">
+            <option class="dropdown-item" value="">Ordenar</option>
+            <option class="dropdown-item" value="a-z">a-z</option>
+            <option class="dropdown-item" value="z-a">z-a</option>
+            </select>
+            </li>  
+            
+            <li class="nav-item dropdown  limargin">
+            <select class= "form-control" id="filterTags" >
+            <option class="nav-link dropdown-toggle" >clase de campeón</option>
+            <option class="dropdown-item" value="fighter">fighter/luchador</option>
+            <option class="dropdown-item" value="tank">tank/tanque</option>
+            <option class="dropdown-item" value="mage">mage/mago</option>
+            <option class="dropdown-item" value="assassin">assassin/asesino</option>
+            <option class="dropdown-item" value="support">support/soporte</option>
+            <option class="dropdown-item" value="marksman">marksman/tirador</option>
+           
+            </select>
+             </ul>
+            
+    
+            </div>
+            </nav>
+            </div>
+            </div>
+            </div>
+    
+      </header>
+      
+
       <div class="container">
-      <div class="text-center">
-      <div class="row">
-      <div class="col-12">
-      <img src="./img/logo.png" class="img-fluid" alt="Responsive image">
-      </div>
-      </div>
-      </div>
-      </div>
-      <br>
-        <div class="container">
-        <div class="row">
-        <div class="col-12">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" id="restart" href="./index.html">Menú de Inicio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>   
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        
-        <ul class="navbar-nav mr-auto">
-        
-        <li class="nav-item dropdown  limargin">
-        <select class= "form-control" id="filterOrder">
-        <option class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ordenar</option>
-        <option class="dropdown-item" value="growing">Creciente</option>
-        <option class="dropdown-item" value="decreasing">Decreciente</option>
-        </select>
-        </li>
-        
-        <li class="nav-item dropdown  limargin">
-        <select class= "form-control" id="filterType" >
-        <option class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tipos de Pókemon</option>
-        <option class="dropdown-item" value="Normal">Normal</option>
-        <option class="dropdown-item" value="Fire">Fuego (Fire)</option>
-        <option class="dropdown-item" value="Water">Agua (Water)</option>
-        <option class="dropdown-item" value="Grass">Hierba / Planta (Grass)</option>
-        <option class="dropdown-item" value="Electric">Eléctrico (Electric)</option>
-        <option class="dropdown-item" value="Ice">Hielo (Ice)</option>
-        <option class="dropdown-item" value="Fighting">Lucha (Fighting)</option>
-        <option class="dropdown-item" value="Poison">Veneno (Poison)</option>
-        <option class="dropdown-item" value="Ground">Tierra (Ground)</option>
-        <option class="dropdown-item" value="Rock">Roca (Rock)</option>
-        <option class="dropdown-item" value="Flying">Volador (Flying)</option>
-        <option class="dropdown-item" value="Psychic">Psíquico (Psychic)</option>
-        <option class="dropdown-item" value="Bug">Insecto / Bicho (Bug)</option>
-        <option class="dropdown-item" value="Ghost">Fantasma (Ghost)</option>
-        <option class="dropdown-item" value="Dragon">Dragon</option> 
-        </select>
-        </li>
-
-        <li class="nav-item dropdown  limargin">
-        <select class="form-control" id="departureTime">
-        <option class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hora de Salida</option>
-        <option class="dropdown-item" value="morning">Mañana</option>
-        <option class="dropdown-item" value="late">Tarde</option>
-        <option class="dropdown-item" value="night">Noche</option>
-        <option class="dropdown-item" value="N/A">N/A</option>
-        </select>
-        </li>
-
-        </ul>
-        
-
-        </div>
-        </nav>
-        </div>
-        </div>
+          <div id="show_lol" class= "card-deck">   
+          </div>      
         </div>
 
-  </header>
-  <br>
-  <br>
-  <br>
-  <div class="container">
-    <div id="viewPokemon" class= "card-deck">   
-    </div>      
-  </div>
 
-  <div class="container">
-    <div id="viewCalculeTab">
-    </div>
-    <div id="viewCalcule" class="card-group">
-    </div>
-  </div>
-<br>
-<br>
-<br>
-  <footer>
-  <div class="row">
-  <div class="col-12">
-  <div class="container p-3 mb-2 bg-dark text-white">
-  <p>© Herrera & Lemus Company</p>
-  </div>
-  </div>
-  </div>
-  </footer> 
-
-  <script src="../js/jquery-3.4.0.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>  
-  <script src="./data/pokemon/pokemon.js"></script>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
-  
-</body>
+    <div id="root"></div>
+    <!-- <script src="./data/injuries/injuries.js"></script> -->
+    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
+    <!-- <script src="./data/steam/steam.js"></script> -->
+    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+     <script src="./data/lol/lol.js"></script> 
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
