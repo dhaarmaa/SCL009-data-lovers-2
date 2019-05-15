@@ -1,0 +1,66 @@
+.limargin{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#cardPoke{
+    max-width:20rem;
+    max-height:20rem;
+    width:100%;
+    height:auto;
+ }
+
+ #cardImage{
+    max-width:10rem;
+    height:5rem;
+    width:100%;
+    height:auto;
+    padding-top:1rem;
+ }
+
+ #cardPokeTwo{
+    max-width:10rem;
+    height:5rem;
+    width:100%;
+    height:auto;
+ }
+
+ #cardHour{
+    min-width: 15rem;
+    max-width: 25rem;
+ }
+
+ #cardHour_2{
+    min-width: 17rem;
+    max-width: 20rem;
+ }
+
+ #cardHourTwo{
+    min-width: 15rem;
+    max-width: 25rem;
+ }
+
+ #cardHourTwo_2{
+    min-width: 17rem;
+    max-width: 20rem;
+ }
+
+ #cardPokeHour{
+    min-width: 15rem;
+    max-width: 25rem;
+ }
+
+ #cardPokeHour_2{
+    min-width: 17rem;
+    max-width: 20rem;
+ }
+
+ #cardPokeHourTwo{
+    min-width: 15rem;
+    max-width: 25rem;
+ }
+
+ #cardPokeHourTwo_2{
+    min-width: 17rem;
+    max-width: 20rem;
+ }
