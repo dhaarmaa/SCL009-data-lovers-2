@@ -3,33 +3,22 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-/*const example = () => {
-  return 'example';
-};
-
-window.example = example;*/
-
-//const data= window.LOL.data;//llamo a mi array
-//console.log(data)
-//funcion del orden
-/*data: array
-sortBy: lo que quero ordenar
-sortorder: como lo quiero ordenar */
-/*const orderlol= (datalol, sortBy, sortOrder)=>{
-   // let  ascLol= datalol;
-    let resultLol = []
-    if(sortOrder === "a-z"){
-      ascLol.sort((a, b)=>{
-        if(a[sortBy]< b[sortBy]){
-          return -1;}
-        if(a[sortBy]> b[sortBy]){
-          return 1;}
-        return 0;
-      })
-    } 
-  
-  }
-  window.orderlol= orderlol;*/
+const sortlol= (datalol, sortBy, sortOrder) => {
+    const dataSort= datalol;
+    if(sortBy==="name" && sortOrder === "a-z" ){
+      dataSort.sort((a,b)=>{
+          if(a.name>b.name){
+            return 1;
+          }
+          if(a.name<b.name){
+            return -1;
+          }
+            return 0;
+        });
+    }
+//     else if ()
+}
+    window.sortlol= sortlol
   
   //funcion de filtrado
   const filterlol = (datalol, condition) =>{
@@ -42,6 +31,22 @@ sortorder: como lo quiero ordenar */
     window.filterlol = filterlol;
   
   //funcion de estadistica
+
+  /*const counterCharacter = (datalol, condition) =>{
+    let countCahracter = datalol.reduce((count,data) =>{
+      if(data[condition]){
+      return count + 1;}
+    },0)
+    return countCahracter;
+  };*/
   
+  //window.counterCharacter = counterCharacter ;
   
+  //Función de calculo, porcentaje de pokémones según hora
+  const filterTags = (datalol =>{
+  let dataLolPercent = Math.round((datalol*100)/135);
   
+  return dataLolPercent;
+  });
+  
+    window.filterTags = filterTag;

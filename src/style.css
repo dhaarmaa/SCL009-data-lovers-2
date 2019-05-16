@@ -1,4 +1,20 @@
+body{
+    background-image: url("https://i.ibb.co/1vGFvWJ/fondo4.jpg");
+}
 .limargin{
     margin-left: 5px;
     margin-right: 5px;
 }
+
+#container {
+    background-color: rgba(12, 3, 0.288, 0);
+    border: 2px solid rgb(185, 102, 102);
+    justify-content: center;
+     position: relative;
+     padding: 0.5em;
+     margin-left: 0.5em;
+     margin-right: 0.5em;
+     margin-top: 0.5em;
+     margin-bottom: 0.5em;
+    
+ }
