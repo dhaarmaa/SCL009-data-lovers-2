@@ -37,26 +37,18 @@ document.getElementById("order").addEventListener('change', () => {
         console.log(result);
         show(result);
         
-       /* let percentTags= window.filterlol(result);
+       /* 
     document.getElementById("percent_tags").innerHTML= ` <div class= "percent-div">
    <p class="percent-p"> Porcentaje de campeones que corresponden a este rol: ${percentTags} % </p>
     </div>
   
     `*/
-    countPoke = window.CounterCharacter(datalol,"spawn_time");
-dataPercent = window.filterCal(countTags);
-
+    let percentTags= window.filterTags(result);
     document.getElementById("percent_tags").innerHTML+=
     `
-        <div 
-          <h5 class="card-title">Porcentaje: ${(dataLolPercent)}%</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    <div class= "percentDiv">
+    <p class="percent-p"> Porcentaje de campeones que corresponden a este rol: ${percentTags} % </p>
+     </div>
+    `
     });
-
     
-
-

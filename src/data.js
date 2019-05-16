@@ -49,4 +49,4 @@ const sortlol= (datalol, sortBy, sortOrder) => {
   return dataLolPercent;
   });
   
-    window.filterTags = filterTag;
+    window.filterTags = filterTags;
